@@ -1,0 +1,476 @@
+2. Prob. Revise Treatment Panel - Make the treatment panel bigger and easier to navigate for the purpose of understanding treatment history of one or
+multiple medications.
+Sol. src - app - graph-panel - graph-panel.component.html - div id "medications-container"
+
+
+4. Prob. Edit Lab Configuration File - Add a list of labs to the "Labs" configuration file
+Sol. src - assets - graph-config.js - Add to "var labsConfig"
+
+
+
+5. Prob. Edit Lab Configuration file - Remove a list of medications from the "Other Meds" configuration file.
+Sol. src - assets - graph.config.js - var medicationConfig - otherMeds - ids
+
+
+
+6. Prob. Infusion Medications Display Logic
+Understood
+
+
+8. Prob. Rename "Other Meds" - Rename "Other Meds" category in the left nav bar to a text (to be finalized later)
+Sol. src - app - neuro-graph - neuro-related - neuro-related.component.html
+
+
+
+
+{
+    "proc_id": 515138,
+    "proc_name": "ABSOLUTE LYMPHOCYTE COUNT",
+    "proc_code": "QLAB%RATCBCD",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 515260,
+    "proc_name": "ABSOLUTE LYMPHOCYTE COUNT",
+    "proc_code": "QLAB%RSLCBCD",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 515462,
+    "proc_name": "ABSOLUTE LYMPHOCYTE COUNT",
+    "proc_code": "QLAB%SBCBCD",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 17542,
+    "proc_name": "HEPATITIS B",
+    "proc_code": "EACEO64",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "Y",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 368625,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "QLAB307304",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 402910,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "QLAB315432",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 27354,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EA42749UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 14008,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EARHBP",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 22277,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EA7091UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 30033,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EARHEPBE",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 24568,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EA6205UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 18320,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EA42732UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 15797,
+    "proc_name": "HEPATITIS B PANEL",
+    "proc_code": "EARHBPNL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 17775,
+    "proc_name": "HEPATITIS B PROFILE",
+    "proc_code": "EA42727UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 16087,
+    "proc_name": "HEPATITIS B PROFILE",
+    "proc_code": "EARHBPSD",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 82090,
+    "proc_name": "IGA",
+    "proc_code": "LABIGA",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "6000000",
+    "PROC_GROUP_NAME": "DERSLT",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 22490,
+    "proc_name": "IGA",
+    "proc_code": "EARIGMA",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 18005,
+    "proc_name": "IGA",
+    "proc_code": "EA539SK",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "NULL",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 14032,
+    "proc_name": "IGA",
+    "proc_code": "EARIMGA",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 11715,
+    "proc_name": "IGG",
+    "proc_code": "EARIMGG",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 18003,
+    "proc_name": "IGG",
+    "proc_code": "EA543SK",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "NULL",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 82106,
+    "proc_name": "IGG",
+    "proc_code": "LABIGG",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "6000000",
+    "PROC_GROUP_NAME": "DERSLT",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 18004,
+    "proc_name": "IGM",
+    "proc_code": "EA545SK",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "NULL",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 14037,
+    "proc_name": "IGM",
+    "proc_code": "EARIMGM",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 82116,
+    "proc_name": "IGM",
+    "proc_code": "LABIGM",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "6000000",
+    "PROC_GROUP_NAME": "DERSLT",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 29885,
+    "proc_name": "IMMUNOGLOBULIN PANEL",
+    "proc_code": "EA100037",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 11716,
+    "proc_name": "IMMUNOGLOBULIN PROFILE",
+    "proc_code": "EARIMMP",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 176922,
+    "proc_name": "IMMUNOGLOBULINS",
+    "proc_code": "EAIMMUNO",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 82132,
+    "proc_name": "IMMUNOGLOBULINS",
+    "proc_code": "LABIMMUNO",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "6000000",
+    "PROC_GROUP_NAME": "DERSLT",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 438824,
+    "proc_name": "IMMUNOGLOBULINS",
+    "proc_code": "QLAB56016",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 24643,
+    "proc_name": "LYMPHOCYTE/CD4 COUNT, TOTAL",
+    "proc_code": "EA57172UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 355736,
+    "proc_name": "PROLACTIN",
+    "proc_code": "QLAB43230",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "NULL",
+    "PROC_GROUP_NAME": "NULL",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 82924,
+    "proc_name": "PROLACTIN",
+    "proc_code": "LABPROL",
+    "RECORD_STATE_EAP_C": "NULL",
+    "record_state": "NULL",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "6000000",
+    "PROC_GROUP_NAME": "DERSLT",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 11737,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EARPLTN",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "Y",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 11207,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EAPROL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "Y",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 13013,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EA43230UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "NULL",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 17375,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EA746",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 6071,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EA84146",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "Y",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 17886,
+    "proc_name": "PROLACTIN",
+    "proc_code": "EA746SK",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 11381,
+    "proc_name": "TOTAL LYMPHOCYTE COUNT",
+    "proc_code": "EATLYMP",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+},
+{
+    "proc_id": 19614,
+    "proc_name": "TOTAL LYMPHOCYTE COUNT^L",
+    "proc_code": "EA57040UL",
+    "RECORD_STATE_EAP_C": "2",
+    "record_state": "Deleted",
+    "IS_ACTIVE_YN": "N",
+    "PROC_GROUP_ID": "17",
+    "PROC_GROUP_NAME": "LABORATORY/PATHOLOGY",
+    "proc_type": "Charge"
+}

@@ -1,0 +1,116 @@
+﻿//API work at Netwoven
+                    1. show edssScore as text in database and return accordingly.
+                    2. Make qx_code in place of pomId in database
+                    3. change in node.js api on qx_code
+                    4. Remove all extra fields from post request
+                    6. In post request make all attributes string
+7. Implement edss_score and symptoms get and show them in review page
+
+//universal meeting id
+https://global.gotomeeting.com/join/432742237
+http://env-3391555.cloudjiffy.net
+//API
+http://node8066-env-3391555.cloudjiffy.net
+//code drop procedures
+Part 1: To staging
+1. Update tested dev branch to git.
+2. ng build --prod (environment.prod.ts points to cloudjiffy, environment.ts points to cloudjiffy)
+3. git checkout staging. git merge dev.
+3. update staging to git hub
+
+Part 2: to cloudjiffy
+1. copy the compiled code in public folder of neuroshare-node
+2. update node neuroshare-node project to git
+3, update cloudjiffy and test
+
+
+//reset / initial data
+responses, qxVisited,answeredUpTo : null
+completedDate, status
+1111: null, null: A
+1112: 2017-08-01, started: B
+1113: 2018-08-16, null: C
+1114: 2018-08-16, started: C
+1115: 2017-08-16, completed: B
+1116: 2018-03-16, completed: A
+
+//Project management
+XXXXXXXXX         :Rate :Allocated Hrs  :Actual     :Diff   :$ diff
+Architect      :$65     :132            :155        :23     :$1495
+Developer      :$50     :144            :188        :44     :$2200
+BA/QA          :$38     :104            :120        :16     :$608
+ui             :$40     :16             :4          :-12    :-$160
+                                                    total   :$4143
+
+
+get request qx:
+
+get request 1: sample 1: http://localhost:3000/api/qx?qx_code=1111
+
+response:
+{
+    "appointment_date": "2018-09-04 00:00:00",
+    "patient_first_name": "Lareco",
+    "patient_last_name": "Aster",
+    "clinician_name": "Mustang Gorbacha",
+    "gender": "male",
+    "carry_bag": "",
+    "qx_name": "neuroshare-qx",
+    "responses": "",
+    "qx_code": "1111",
+    "status": "started"
+}
+
+get request 1: sample 2: http://localhost:3000/api/qx?qx_code=1112
+response:
+{
+    "appointment_date": "2018-08-22 00:00:00",
+    "patient_first_name": "Gulancho",
+    "patient_last_name": "Carlo",
+    "clinician_name": "Putik Mondal",
+    "gender": "female",
+    "carry_bag": "",
+    "qx_name": "neuroshare-qx",
+    "responses": "",
+    "qx_code": "1112",
+    "qx_completed_at": "2018-09-12T18:30:00.000Z",
+    "status": "started"
+}
+
+get request 2: sample 1: http://localhost:3000/api/qx/edssAndSymptoms?qx_code=1111
+response:
+{
+    "edss_score": "12",
+    "symptoms": "Cognition(mild), Fatigue(severe), Mood(mild), Sleep(mild), Vision(moderate), Speech(severe)"
+}
+
+get request 2: sample 2: http://localhost:3000/api/qx/edssAndSymptoms?qx_code=1113
+response:
+{
+    "edss_score": "12",
+    "symptoms": "Pain(severe), Bowel(mild), Bladder(moderate)"
+}
+
+post request 1: normal
+body:
+{
+	carry_bag: "",
+	qx_code: "1111",
+	responses: "[]",
+	status: "started",
+    id: "postPatientData"
+}
+
+post request 2: complete
+body:
+{
+    qx_code: "1111",
+    status: "completed",
+    id: "postPatientData"
+}
+
+post request 2: unsubscribe
+body:
+{
+    qx_code:"1111",
+}
