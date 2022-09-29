@@ -52,7 +52,7 @@
     "angular2-uuid": "^1.1.1",
     "bowser": "^1.7.2",
     "core-js": "^2.4.1",
-    "d3": "^4.11.0",
+    "d3": "^7.6.1",
     "dom-autoscroller": "^2.3.3",
     "es2015-proxy": "^0.1.7",
     "font-awesome": "^4.7.0",
